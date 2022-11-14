@@ -1,0 +1,39 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Píkáchú", "Midnight")
+
+--Tabs
+local Tab1 = Window:NewTab("Buy Items")
+local Tab2 = Window:NewTab("Credits")
+
+--Sections inside tabs
+local Tab1Section = Tab1:NewSection("Buy Items")
+local Tab2Section = Tab2:NewSection("Credits")
+
+--Buttons
+Tab1Section:NewButton("Buy F", "Nothing to see here", function()
+  game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer("F")
+end)
+Tab1Section:NewButton("Buy Harambe", " ", function()
+game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer("Box Toy Harambe")
+end)
+Tab1Section:NewButton("Buy Green Ooze", "Buys Green Ooze", function()
+    game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer("Green Ooze")
+end)
+Tab1Section:NewButton("Buy Retro Bike", "Buys Retro Bike", function()
+    game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer("Retro Bike")
+end)
+Tab1Section:NewButton("Buy Dart", "Buys Dart", function()
+    game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer("Dart")
+end)
+Tab1Section:NewButton("Buy Demogorgan", "Buys Demogorgan", function()
+    game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer("Demogorgan")
+end)
+Tab1Section:NewButton("Buy Demogorgan Kawaii", "Buys Demogorgan Kawaii", function()
+    game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer("Demogorgan Kawaii")
+end)
+
+
+--Tab2
+Tab2Section:NewButton("Made by Píkáchú", "Credits To Pikachu", function()
+    print("Thank You For Using This Trash Script:)")
+end)
