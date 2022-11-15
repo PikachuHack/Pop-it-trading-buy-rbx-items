@@ -32,7 +32,7 @@ Tab1Section:NewButton("Buy Demogorgan Kawaii", "Buys Demogorgan Kawaii", functio
     game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer("Demogorgan Kawaii")
 end)
 Tab1Section:NewButton("Buy Xox Controller", "Buys Xox Controller", function()
-    game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer("Xox Controller")
+    game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer("XOX Controller")
 end)
 
 
