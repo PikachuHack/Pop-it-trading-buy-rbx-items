@@ -3,11 +3,13 @@ local Window = Library.CreateLib("Píkáchú", "Midnight")
 
 --Tabs
 local Tab1 = Window:NewTab("Buy Items")
-local Tab2 = Window:NewTab("Credits")
+local Tab2 = Window:NewTab("Scripts")
+local Tab3 = Window:NewTab("Credits")
 
 --Sections inside tabs
 local Tab1Section = Tab1:NewSection("Buy Items")
-local Tab2Section = Tab2:NewSection("Credits")
+local Tab2Section = Tab2:NewSection("Scripts")
+local Tab3Section = Tab3:NewSection("Credits")
 
 --Buttons
 Tab1Section:NewButton("Buy F", "Buys G", function()
@@ -34,9 +36,26 @@ end)
 Tab1Section:NewButton("Buy Xox Controller", "Buys Xox Controller", function()
     game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer("XOX Controller")
 end)
+Tab1Section:NewButton("Buy Box Toy Lem", "Buys Box Toy Lem", function()
+    game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer("Box Toy Lem")
+end)
+Tab1Section:NewButton("Buy Inxta", "Buys Inxta", function()
+    game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer("Inxta")
+end)
+Tab1Section:NewButton("Buy Box Toy Sandman", "buys box toy sandman", function()
+    game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer("Box Toy SandMan")
+end)
+Tab1Section:NewButton("Buy Box toy Sanic", "Buys Box Toy sanic", function()
+    game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer("Box Toy Sanic")
+end)
+Tab1Section:NewButton("Buy Box Toy Noob", "buys box toy noob", function()
+    game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer("Box Toy Noob")
+end)
+Tab2Section:NewButton("Infinite Yield", "Executes Infiniteyield", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+end)
 
-
---Tab2
-Tab2Section:NewButton("Made by Píkáchú", "Credits To Pikachu", function()
+--Tab3
+Tab3Section:NewButton("Made by Píkáchú", "Credits To Pikachu", function()
     print("Thank You For Using This Trash Script:)")
 end)
