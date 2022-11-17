@@ -9,10 +9,11 @@ local Tab3 = Window:NewTab("Credits")
 --Sections inside tabs
 local Tab1Section = Tab1:NewSection("Buy Items")
 local Tab2Section = Tab2:NewSection("Scripts")
-local Tab3Section = Tab3:NewSection("Credits")
+local Tab3Section = Tab3:NewSection("Made By Píkáchú")
+local Tab3Section = Tab3:NewSection("Thank you for using this script!")
 
 --Buttons
-Tab1Section:NewButton("Buy F", "Buys G", function()
+Tab1Section:NewButton("Buy F", "Buys F", function()
   game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer("F")
 end)
 Tab1Section:NewButton("Buy Harambe", "Buys Harambe", function()
@@ -54,6 +55,66 @@ end)
 Tab2Section:NewButton("Infinite Yield", "Executes Infiniteyield", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
 end)
+Tab2Section:NewButton("giant", "makes you giant (r15)", function()
+    --Shit ass script made by failedmite57926
+
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local Character = LocalPlayer.Character
+local Humanoid = Character:FindFirstChildOfClass("Humanoid")
+
+function rm()
+	for i,v in pairs(Character:GetDescendants()) do
+		if v:IsA("BasePart") then
+			if v.Name == "Handle" or v.Name == "Head" then
+				if Character.Head:FindFirstChild("OriginalSize") then
+					Character.Head.OriginalSize:Destroy()
+				end
+			else
+				for i,cav in pairs(v:GetDescendants()) do
+					if cav:IsA("Attachment") then
+						if cav:FindFirstChild("OriginalPosition") then
+							cav.OriginalPosition:Destroy()  
+						end
+					end
+				end
+				v:FindFirstChild("OriginalSize"):Destroy()
+				if v:FindFirstChild("AvatarPartScaleType") then
+					v:FindFirstChild("AvatarPartScaleType"):Destroy()
+				end
+			end
+		end
+	end
+end
+
+rm()
+wait(0.5)
+Humanoid:FindFirstChild("BodyProportionScale"):Destroy()
+wait(1)
+
+rm()
+wait(0.5)
+Humanoid:FindFirstChild("BodyHeightScale"):Destroy()
+wait(1)
+
+rm()
+wait(0.5)
+Humanoid:FindFirstChild("BodyWidthScale"):Destroy()
+wait(1)
+
+rm()
+wait(0.5)
+Humanoid:FindFirstChild("BodyDepthScale"):Destroy()
+wait(1)
+
+rm()
+wait(0.5)
+Humanoid:FindFirstChild("HeadScale"):Destroy()
+wait(1)
+end)
+Tab1Section:NewButton("Buy Walky Talky", "Buys Walky Talky", function()
+    game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer("Walky Talky")
+end)
+
 
 --Tab3
 Tab3Section:NewButton("Made by Píkáchú", "Credits To Pikachu", function()
