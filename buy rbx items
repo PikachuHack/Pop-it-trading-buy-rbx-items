@@ -4,13 +4,15 @@ local Window = Library.CreateLib("Píkáchú", "Midnight")
 --Tabs
 local Tab1 = Window:NewTab("Buy Items")
 local Tab2 = Window:NewTab("Scripts")
-local Tab3 = Window:NewTab("Credits")
+local Tab3 = Window:NewTab("drop items")
+local Tab4 = Window:NewTab("Credits")
 
 --Sections inside tabs
 local Tab1Section = Tab1:NewSection("Buy Items")
 local Tab2Section = Tab2:NewSection("Scripts")
-local Tab3Section = Tab3:NewSection("Made By Píkáchú")
-local Tab3Section = Tab3:NewSection("Thank you for using this script!")
+local Tab3Section = Tab3:NewSection("drop items")
+local Tab4Section = Tab4:NewSection("Made By Píkáchú")
+local Tab4Section = Tab4:NewSection("Thank you for using this script!")
 
 --Buttons
 Tab1Section:NewButton("Buy F", "Buys F", function()
@@ -327,9 +329,22 @@ end)
 Tab2Section:NewButton("Trade Value", "Gives you trade value", function()
     game.Players.localPlayer.XRay.Value = true
 end)
+Tab3Section:NewButton("drop f", "drops f once", function()
+local args = {
+    [1] = "F"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Equip:FireServer(unpack(args))
+wait(0.5)
+local args = {
+    [1] = "F"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Drop:FireServer(unpack(args))
+end)
 
 
---Tab3
-Tab3Section:NewButton("Made by Píkáchú", "Credits To Pikachu", function()
+--Tab4
+Tab4Section:NewButton("Made by Píkáchú", "Credits To Pikachu", function()
     print("Thank You For Using This Trash Script:)")
 end)
