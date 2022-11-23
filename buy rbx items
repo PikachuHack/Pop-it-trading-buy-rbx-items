@@ -342,6 +342,61 @@ local args = {
 
 game:GetService("ReplicatedStorage").RemoteEvents.Drop:FireServer(unpack(args))
 end)
+Tab3Section:NewButton("drop harambe", "drops harambe once", function()
+local args = {
+    [1] = "Box Toy Harambe"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Equip:FireServer(unpack(args))
+wait(0.5)
+local args = {
+    [1] = "Box Toy Harambe"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Drop:FireServer(unpack(args))
+end)
+Tab3Section:NewButton("drop green ooze", "drops green ooze once", function()
+local args = {
+    [1] = "Green Ooze"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Equip:FireServer(unpack(args))
+wait(0.5)
+local args = {
+    [1] = "Green Ooze"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Drop:FireServer(unpack(args))
+end)
+Tab3Section:NewButton("drop retro bike", "drops retro bike once", function()
+local args = {
+    [1] = "Retro Bike"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Equip:FireServer(unpack(args))
+wait(0.5)
+local args = {
+    [1] = "Retro Bike"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Drop:FireServer(unpack(args))
+end)
+Tab3Section:NewButton("drop dart", "drops dart once", function()
+local args = {
+    [1] = "Dart"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Equip:FireServer(unpack(args))
+wait(0.5)
+local args = {
+    [1] = "Dart"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Drop:FireServer(unpack(args))
+end)
+Tab2Section:NewButton("fake drop gui", "Executes fake drop gui", function()
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/domdaobfuscater/09214a11b8a30bab47ceff281116195f/raw/40356a0ff4542a51283ab5de0a642233a6ceb6f9/gistfile1.txt"))()
+end)
 
 
 --Tab4
